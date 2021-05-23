@@ -1,0 +1,11 @@
+[Unit]
+Description=disk
+
+[Mount]
+What=/dev/disk/by-uuid/<uuid>
+Where=/mnt/disk
+Type=btrfs
+Options=defaults,compress=lzo,nofail
+
+[Install]
+WantedBy=multi-user.target
